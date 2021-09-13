@@ -1,1 +1,22 @@
+安装anaconda 
+1.	打开spyder 
+2.	打开文件
+
+3. 更改工作目录到该工作目录下，以ecsa作图为例（本脚本适合chi760E出图，cv区间为0.1V，比如：OER非法拉第区0.0-0.1V，另外本脚本适用于集合面积0.25cm2 如果需要自定义表面请修改126行代码 
+surface_area = 0.25）可以把0.25改成你所采用的几何面积
+
+4.该目录数据结构为：
+  Ecsa文件夹内包括多个材料的cv数据，比如1，2（其中1，2可以命名为自己材料比如NiFe，NiMn， etc），文件夹1，2内部包括不同扫速的cv数据（10，20，30. …），一定要命名为不同扫速的名字。
+
+
+5. 目录ECSA下去执行（Shift+Enter键）
+或者打开anaconda prompt进入ECSA目录下，把ecsa-new.py复制到该目录下。然后执行python ecsa.py 
+就可以出图了。 
+
+
+6.同理 如果想要获得LSV曲线 和EIS 曲线 或者bode曲线 只需要把lsv.py和eis.py 执行python lsv.py 就可以获得lsv和tafel曲线 最好把同一实验的数据放在一个文件夹内一块处理
+python eis.py 可以获得eis 和bode图
+
+7.后期会做成小软件及提供配色接口
+
 
