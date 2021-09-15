@@ -141,7 +141,7 @@ if __name__ == '__main__':
             
         plt.legend(loc = 'best', fontsize=8, frameon=False)
             
-        plt.savefig(dir_name[i], dpi=800)
+        plt.savefig('cv', dpi=800)
         plt.figure()           
                        
         #txt_remove_title('.')
@@ -161,6 +161,7 @@ if __name__ == '__main__':
         txt_name = [f.strip('.txt') for f in os.listdir('.') if f.endswith('.txt')]
         
         x = [float(i) for i in np.sort(txt_name)]
+        x = sorted(x)
         y = []       
         for j in range(len(txts)):
             y.append(return_Janodic_minus_Jcathodic(txts[j], surface_area))
